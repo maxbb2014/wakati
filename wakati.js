@@ -47,7 +47,8 @@ if (Meteor.isClient) {
   Template.dataRow.helpers({
     wakati: function () {
       // add functions
-      return myWakati.find().fetch();
+      return myWakati.find({}, {limit: 1});
+      // return myWakati.findOne("qwgPEa9GodAShLWDZ");
     }
   });
   Template.displayRow.events({

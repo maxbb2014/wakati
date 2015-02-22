@@ -8,3 +8,10 @@ meteor-platform
 autopublish
 insecure
 twbs:bootstrap
+accounts-password
+accounts-github
+accounts-twitter
+accounts-facebook
+accounts-google
+accounts-ui-unstyled
+accounts-ui

@@ -20,25 +20,14 @@
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="#">Wakati</a>
         </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+
+        <div class="nav navbar-collapse collapse navbar-right">
+          <div class="container-fluid">
+            {{>loginButtons}}
+          </div>
+        </div> <!--/.navbar-collapse -->
       </div>
     </div>  
 </template>
@@ -74,7 +63,7 @@
 <template name="footer">
        <!-- footer -->
   <hr>
-  <p>&copy; Apphilia 2014</p>
+  <p>Wakati&copy; Apphilia 2014</p>
   <hr>
 </template>
 
@@ -82,7 +71,9 @@
        <!-- myWakati data -->
       <div class="well">
        {{#each wakati}}
-           {{startDate}},{{endDate}},{{eventInfo}},{{createdBy}}
+        <!--  TODOS remove strong formatting -->
+        <strong>Start Date: </strong>{{startDate.toDateString}}   <strong>End date: </strong>{{endDate.toDateString}}<br>
+        <strong>Event Info: </strong>{{eventInfo}}  <strong>Entered By: </strong>{{createdBy}}
        {{/each}}
        </div>
       <!-- myWakati data -->
@@ -94,7 +85,7 @@
             <input type="text" class="form-control" placeholder="Bio/Event/Period">
             <input type="text" class="form-control" placeholder="Notes">
           </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn btn-default">Add Entry</button>
         </form>
 		
       </div> <!-- row -->
