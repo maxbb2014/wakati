@@ -8,11 +8,13 @@
   <!-- start body of Wakati App -->
   <div class="container">
     {{> displayRow}}
+    <hr>
+    {{> well}}
     {{> dataRow}}
+   
     {{> footer}}
   </div> <!-- /container -->
 </body>
-
 
 <template name="topMenu">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -68,55 +70,7 @@
 		</div>
       </div>
 </template> <!-- displayRow -->
-<template name="entryRow"> <!-- entryRow -->
-  	  <div class="row">
-	        <div class="page-header">
-			</div>
-        <div class="col-sm-3">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Start Date</h3>
-            </div>
-            <div class="panel-body">
-              Calender Picker
-            </div>
-          </div>
-        </div><!-- /.col-sm-3 -->
-		
-        <div class="col-sm-3">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">End Date</h3>
-            </div>
-            <div class="panel-body">
-              Calender Picker
-            </div>
-          </div>
-        </div><!-- /.col-sm-3 -->
-				
-        <div class="col-sm-3">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Type</h3>
-            </div>
-            <div class="panel-body">
-              Bio/Event/Period
-            </div>
-          </div>
-        </div><!-- /.col-sm-3 -->
 
-        <div class="col-sm-3">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Notes</h3>
-            </div>
-            <div class="panel-body">
-              Free text entry
-            </div>
-          </div>
-        </div><!-- /.col-sm-3 -->
-      </div>
-</template> <!-- entryRow -->
 <template name="footer">
        <!-- footer -->
   <hr>
@@ -138,3 +92,9 @@
 		
       </div> <!-- row -->
 </template> <!-- dataRow -->
+<template name="well"> <!-- well -->
+  <div class="well">
+    Display last entry
+  </div>
+  
+</template> <!-- well -->
