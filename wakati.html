@@ -9,7 +9,7 @@
   <div class="container">
     {{> displayRow}}
     <hr>
-    {{> well}}
+   
     {{> dataRow}}
    
     {{> footer}}
@@ -79,6 +79,13 @@
 </template>
 
 <template name="dataRow"> <!-- dataRow -->
+       <!-- myWakati data -->
+      <div class="well">
+       {{#each wakati}}
+           {{startDate}},{{endDate}},{{eventInfo}},{{createdBy}}
+       {{/each}}
+       </div>
+      <!-- myWakati data -->
   	  <div class="row">
         <form class="navbar-form navbar-left" role="entry">
           <div class="form-group">
@@ -92,9 +99,3 @@
 		
       </div> <!-- row -->
 </template> <!-- dataRow -->
-<template name="well"> <!-- well -->
-  <div class="well">
-    Display last entry
-  </div>
-  
-</template> <!-- well -->
